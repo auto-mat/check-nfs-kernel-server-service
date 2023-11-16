@@ -24,4 +24,4 @@ check-nfs-kernel-server-service OR auto0mat/check-nfs-kernel-server-service:late
 
 ### Licence
 
-FS[GNU AGPLv3](https://www.gnu.org/licenses/agpl-3.0.en.html) or later.
+[GNU AGPLv3](https://www.gnu.org/licenses/agpl-3.0.en.html) or later.
