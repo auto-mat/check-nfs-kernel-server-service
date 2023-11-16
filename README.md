@@ -21,6 +21,7 @@ docker run -it --rm \
 --env="DO_FLOATING_IP_ADDRESS=<CHANGE_IT>" \
 --name=check-nfs-kernel-server-service \
 check-nfs-kernel-server-service OR auto0mat/check-nfs-kernel-server-service:latest
+```
 
 ### Licence
 
