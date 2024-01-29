@@ -14,7 +14,7 @@ not assigned, it will assign it).
 docker buildx build -t auto0mat/check-nfs-kernel-server-service:<ACTUAL_YEAR>.<SERIAL_NUMBER> .
 
 # Run Docker container
-docker run -d --rm \
+docker run -it --rm \
 --env="DO_KUBERNETES_TOKEN=<CHANGE_IT>" \
 --env="DO_KUBERNETES_CLUSTER_ID=<CHANGE_IT>" \
 --env="DO_KUBERNETES_CLUSTER_CREDENTIALS_EXPIRY=<CHANGE_IT>" \
