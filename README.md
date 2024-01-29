@@ -1,4 +1,4 @@
-# K8 Check-nfs-kernel-server-service Docker image
+# K8 check-nfs-kernel-server-service Docker image
 
 ### Usage
 K8 Cron job to check if the Kube POD system has the nfs-kernel-server
@@ -7,20 +7,20 @@ provide a kernel module for the correct operation of the NFS server.
 With additional Digital Ocean floating IP address checking (if it is
 not assigned, it will assign it).
 
-### Build Docker Check-nfs-kernel-server-service image and run container
+### Build Docker check-nfs-kernel-server-service image and run container
 
 ```bash
 # Build Docker image
-docker buildx build -t check-nfs-kernel-server-service .
+docker buildx build -t auto0mat/check-nfs-kernel-server-service:<ACTUAL_YEAR>.<SERIAL_NUMBER> .
 
 # Run Docker container
-docker run -it --rm \
+docker run -d --rm \
 --env="DO_KUBERNETES_TOKEN=<CHANGE_IT>" \
 --env="DO_KUBERNETES_CLUSTER_ID=<CHANGE_IT>" \
 --env="DO_KUBERNETES_CLUSTER_CREDENTIALS_EXPIRY=<CHANGE_IT>" \
 --env="DO_FLOATING_IP_ADDRESS=<CHANGE_IT>" \
 --name=check-nfs-kernel-server-service \
-check-nfs-kernel-server-service OR auto0mat/check-nfs-kernel-server-service:latest
+auto0mat/check-nfs-kernel-server-service:latest
 ```
 
 ### Licence
