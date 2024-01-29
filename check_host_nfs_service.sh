@@ -3,7 +3,7 @@
 doctl auth init -t "${DO_KUBERNETES_TOKEN}"
 doctl kubernetes cluster kubeconfig save \
       "${DO_KUBERNETES_CLUSTER_ID}" \
-      --expiry-seconds $(("${DO_KUBERNETES_CLUSTER_CREDENTIALS_EXPIRY}"))
+      --expiry-seconds "${DO_KUBERNETES_CLUSTER_CREDENTIALS_EXPIRY}"
 
 for p in $(kubectl get pods -n kube-system -o name | grep doks)
 do
